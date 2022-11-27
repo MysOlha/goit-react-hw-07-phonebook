@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from 'redux/contactSlice';
+import { addContact } from 'redux/operations';
 import { selectContacts } from 'redux/selectors';
 import { toast } from 'react-toastify';
 import shortid from 'shortid';
@@ -45,7 +45,7 @@ export const Form = () => {
 
     dispatch(
       addContact({
-        id: shortid.generate(),
+        // id: shortid.generate(),
         name,
         number,
       })
